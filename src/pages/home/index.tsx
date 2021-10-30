@@ -13,9 +13,9 @@ import TopSearch from './components/TopSearch';
 import ProportionSales from './components/ProportionSales';
 import OfflineData from './components/OfflineData';
 import { fakeChartData } from './service';
-import PageLoading from './components/PageLoading';
+import PageLoading from '@/components/Common/PageLoading';
 import type { TimeType } from './components/SalesCard';
-import { getTimeDistance } from './utils/utils';
+import { getTimeDistance } from '@/pages/utils/utils';
 import type { AnalysisData } from './data.d';
 import styles from './style.less';
 

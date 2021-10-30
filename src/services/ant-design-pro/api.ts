@@ -6,10 +6,15 @@ import { request } from 'umi';
 export async function currentUser(options?: { [key: string]: any }) {
   return request<{
     data: API.CurrentUser;
-  }>('/api/currentUser', {
+  }>('/demoApi/currentUser', {
     method: 'GET',
     ...(options || {}),
   });
+
+  // return fetch('/demoApi/api/currentUser', {
+  //   method: 'GET',
+  //   ...(options || {}),
+  // });
 }
 
 /** 退出登录接口 POST /api/login/outLogin */

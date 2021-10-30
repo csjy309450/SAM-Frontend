@@ -1,9 +1,9 @@
 import { InfoCircleOutlined } from '@ant-design/icons';
-import { TinyArea, TinyColumn, Progress } from '@ant-design/charts';
+// import { TinyArea, TinyColumn, Progress } from '@ant-design/charts';
 import { Col, Row, Tooltip } from 'antd';
 import numeral from 'numeral';
 import { ChartCard, Field } from '@/components/Common/Charts';
-import type { DataItem } from '../data.d';
+// import type { DataItem } from '../data.d';
 import Trend from '@/components/Common/Trend';
 import Yuan from '@/pages/utils/Yuan';
 import styles from '../style.less';
@@ -17,7 +17,7 @@ const topColResponsiveProps = {
   style: { marginBottom: 24 },
 };
 
-const IntroduceRow = ({ loading, visitData = [] }: { loading: boolean; visitData: DataItem[] }) => (
+const IntroduceRow = ({ loading }: { loading: boolean; visitData?: [] }) => (
   <Row gutter={24}>
     <Col {...topColResponsiveProps}>
       <ChartCard
@@ -44,7 +44,7 @@ const IntroduceRow = ({ loading, visitData = [] }: { loading: boolean; visitData
       </ChartCard>
     </Col>
 
-    <Col {...topColResponsiveProps}>
+    {/* <Col {...topColResponsiveProps}>
       <ChartCard
         bordered={false}
         loading={loading}
@@ -133,7 +133,7 @@ const IntroduceRow = ({ loading, visitData = [] }: { loading: boolean; visitData
           ]}
         />
       </ChartCard>
-    </Col>
+    </Col> */}
   </Row>
 );
 

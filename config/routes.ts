@@ -13,17 +13,19 @@ export default [
           },
         ],
       },
-      {
-        component: './404',
-      },
     ],
   },
   {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
+    path: '/home',
+    name: 'home',
+    icon: 'HomeOutlined',
+    component: './home',
+  }, // {
+  //   path: '/welcome',
+  //   name: 'welcome',
+  //   icon: 'smile',
+  //   component: './Welcome',
+  // },
   {
     path: '/admin',
     name: 'admin',
@@ -37,10 +39,13 @@ export default [
         icon: 'smile',
         component: './Welcome',
       },
-      {
-        component: './404',
-      },
     ],
+  },
+  {
+    name: 'performance',
+    icon: 'FundProjectionScreenOutlined',
+    path: '/performance',
+    component: './Dashboard',
   },
   {
     name: 'list.table-list',
@@ -49,26 +54,10 @@ export default [
     component: './TableList',
   },
   {
-    path: '/dashboard',
-    name: 'dashboard',
-    icon: 'dashboard',
-    routes: [
-      {
-        name: '分析页',
-        icon: 'smile',
-        path: '/dashboard/analysis',
-        component: './dashboard/Analysis',
-      },
-    ], // {
-    //   path: '/dashboard',
-    //   redirect: '/dashboard/analysis',
-    // },
-  },
-  {
     path: '/',
     redirect: '/welcome',
   },
   {
-    component: './404',
+    component: './errorMessage',
   },
 ];
