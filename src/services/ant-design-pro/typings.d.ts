@@ -23,11 +23,11 @@ declare namespace API {
     phone?: string;
   };
 
-  type LoginResult = {
+  interface LoginResult extends ErrorResponse {
     status?: string;
     type?: string;
-    currentAuthority?: string;
-  };
+    currentAuthority: string;
+  }
 
   type PageParams = {
     current?: number;
@@ -64,13 +64,17 @@ declare namespace API {
   type LoginParams = {
     username?: string;
     password?: string;
-    autoLogin?: boolean;
-    type?: string;
+    type?: LoginType;
   };
+
+  enum LoginType {
+    userPassword = 0,
+    sso = 1,
+  }
 
   type ErrorResponse = {
     /** 业务约定的错误码 */
-    errorCode: string;
+    errorCode?: number;
     /** 业务上的错误信息 */
     errorMessage?: string;
     /** 业务上的请求是否成功 */

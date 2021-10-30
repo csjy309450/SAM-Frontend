@@ -5,7 +5,7 @@ import React from 'react';
 import numeral from 'numeral';
 import type { DataItem } from '../data.d';
 import NumberInfo from './NumberInfo';
-import Trend from './Trend';
+import Trend from '@/components/Common/Trend';
 import styles from '../style.less';
 
 const columns = [
